@@ -1,0 +1,57 @@
+Git Cheatsheet
+
+git commit  
+Records changes to the repository.  
+Arguments:  
+  -m "message" adds a commit message inline  
+  --amend modifies the previous commit  
+Behavior changes with arguments: Yes. --amend edits the last commit instead of creating a new one.
+
+git branch  
+Lists, creates, or deletes branches.  
+Arguments:  
+  branch-name creates a new branch  
+  -d branch-name deletes a branch  
+  (no arguments) lists all branches  
+Behavior changes with arguments: Yes. No arguments list branches; with one, it creates or deletes depending on flags.
+
+git checkout  
+Switches branches or restores files.  
+Arguments:  
+  branch-name switches to that branch  
+  -b new-branch creates and switches to a new branch  
+  file-name restores a file from a commit  
+Behavior changes with arguments: Yes. It switches branches or restores files depending on what you pass.
+
+git pull  
+Fetches and merges changes from a remote repository.  
+Arguments:  
+  origin branch-name pulls from a specific remote and branch  
+Behavior changes with arguments: Slightly. You can specify where to pull from.
+
+git push  
+Sends your commits to a remote repository.  
+Arguments:  
+  origin branch-name pushes to a specific remote and branch  
+  --force forces the push  
+Behavior changes with arguments: Yes. You can push different branches or force updates.
+
+git merge  
+Combines changes from one branch into another.  
+Arguments:  
+  branch-name merges that branch into your current one  
+Behavior changes with arguments: Yes. The branch you specify determines what gets merged.
+
+git rebase  
+Moves or replays commits from one branch onto another.  
+Arguments:  
+  branch-name rebases current branch onto the given one  
+  --interactive or -i lets you edit, squash, or reorder commits  
+Behavior changes with arguments: Yes. Interactive mode gives more control over commit history.
+
+git fetch  
+Downloads changes from a remote repository but doesn’t merge them.  
+Arguments:  
+  origin fetches from a specific remote  
+  --all fetches from all remotes  
+Behavior changes with arguments: Slightly. You control what remote or branches to fetch.
