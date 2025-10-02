@@ -34,7 +34,12 @@ Sends your commits to a remote repository.
 Arguments:  
   origin branch-name pushes to a specific remote and branch  
   --force forces the push  
-Behavior changes with arguments: Yes. You can push different branches or force updates.
+  -u <remote> <branch> sets the upstream tracking reference  
+Note about -u:  
+  The -u option tells Git to remember the remote and branch you're pushing to.  
+  After using it once, you can just type git push or git pull without specifying the remote and branch again.  
+  It's like saying, "From now on, this branch should track that remote branch."  
+Behavior changes with arguments: Yes. You can push different branches, force updates, or set upstream tracking. -u <remote> <branch> sets the upstream tracking reference  
 
 git merge  
 Combines changes from one branch into another.  
@@ -55,3 +60,23 @@ Arguments:
   origin fetches from a specific remote  
   --all fetches from all remotes  
 Behavior changes with arguments: Slightly. You control what remote or branches to fetch.
+
+git add  
+Stages changes to be committed.  
+Arguments:  
+  file-name stages a specific file  
+  . stages all changes in the current directory  
+Behavior changes with arguments: Yes. You can stage individual files or everything at once.
+
+git status  
+Shows the current state of the working directory and staging area.  
+Arguments:  
+  (none) shows modified, staged, and untracked files  
+Behavior changes with arguments: No. It always shows the current status.
+
+git log  
+Displays the commit history.  
+Arguments:  
+  --oneline shows a simplified version  
+  --graph shows a visual representation of branches and merges  
+Behavior changes with arguments: Yes. Different flags change how the history is displayed.
