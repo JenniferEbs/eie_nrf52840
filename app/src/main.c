@@ -3,7 +3,7 @@
 */
 
 #include <zephyr/kernel.h>
-#include <zephyr/kernel.h>
+#include <zephyr/drivers/gpio.h>
 
 #define LED0_NODE DT_ALIAS(led0)
 
@@ -23,9 +23,9 @@ int main(void){
         return ret;
     }
 
-    
+
     while(1){
-    
+        gpio_pin_toggle_dt(&led0);
     }
 
     return 0;
